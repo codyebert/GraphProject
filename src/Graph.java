@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Graph {
@@ -17,18 +16,17 @@ public class Graph {
 	int numVertices = 0;
 	//The parent nodes
 	LinkedList<ParentNode> vertexList = null;
+	//Tracks current vertex
 	ParentNode curVertex = null;
+	//Helper array to track indexes
 	ParentNode[] vertexKeys = null;
 	int keyIndex = 0;
 	int shortest = Integer.MAX_VALUE;
 	int longest = -1;
 	int numberOfPaths = 0;
 	
-	
-	
 	//Getters/Setters//
-	public void addToList(ParentNode node)
-	{
+	public void addToList(ParentNode node){
 		vertexList.add(node);
 		vertexKeys[keyIndex] = node;
 		curVertex = node;	
